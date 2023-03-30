@@ -23,7 +23,6 @@ This study proposes a novel BERT-based model for the fine-tune task of token cla
 ├── outputs
 │   └── ner_bert_crf_checkpoint.pt
 ├── predict.py
-├── real_env
 ├── requirements.txt
 ├── stopwords
 │   ├── stopWord_summar.txt
