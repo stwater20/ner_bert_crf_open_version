@@ -9,7 +9,7 @@ from transformers import BertModel,BertPreTrainedModel,AutoTokenizer
 import os
 from torch.utils import data
 import torch.optim as optim
-import numpy as n
+import numpy as np
 
 
 max_seq_length = 256
@@ -268,7 +268,7 @@ def f1_score(y_true, y_pred):
 batch_size = 16
 gradient_accumulation_steps = 1
 total_train_epochs = 50
-data_dir = os.path.join(get_data_dir(), '/datasets/DNRTI/')
+data_dir = os.path.join(get_data_dir(), './datasets/DNRTI/')
 DNRTI_Processor = DNRTI_DataProcessor()
 label_list = DNRTI_Processor.get_labels()
 label_map = DNRTI_Processor.get_label_map()
