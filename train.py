@@ -98,6 +98,8 @@ class DataProcessor(object):
                 # out_lines.append([sentence, ner_seq])
                 out_lists.append([words,pos_tags,bio_pos_tags,ner_labels])
         return out_lists
+    
+    
 class DNRTI_DataProcessor(DataProcessor):
     '''
     DNRTI_-2003
@@ -268,6 +270,10 @@ def f1_score(y_true, y_pred):
 batch_size = 16
 gradient_accumulation_steps = 1
 total_train_epochs = 50
+
+
+# 讀 DNRTI 資料
+
 data_dir = os.path.join(get_data_dir(), './datasets/DNRTI/')
 DNRTI_Processor = DNRTI_DataProcessor()
 label_list = DNRTI_Processor.get_labels()
@@ -283,9 +289,9 @@ print("  Batch size = %d"% batch_size)
 print("  Num steps = %d"% total_train_steps)
 
 
-
 bert_model_scale = 'bert-base-cased'
 tokenizer = AutoTokenizer.from_pretrained(bert_model_scale, do_lower_case=True)
+
 
 train_dataset = NerDataset(train_examples,tokenizer,label_map,max_seq_length)
 dev_dataset = NerDataset(dev_examples,tokenizer,label_map,max_seq_length)
@@ -310,6 +316,8 @@ test_dataloader = data.DataLoader(dataset=test_dataset,
                                 collate_fn=NerDataset.pad)
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
+
 def log_sum_exp_1vec(vec):  # shape(1,m)
     max_score = vec[0, np.argmax(vec)]
     max_score_broadcast = max_score.view(1, -1).expand(1, vec.size()[1])
@@ -320,6 +328,8 @@ def log_sum_exp_mat(log_M, axis=-1):  # shape(n,m)
 
 def log_sum_exp_batch(log_Tensor, axis=-1): # shape (batch_size,n,m)
     return torch.max(log_Tensor, axis)[0]+torch.log(torch.exp(log_Tensor-torch.max(log_Tensor, axis)[0].view(log_Tensor.shape[0],-1,1)).sum(axis))
+
+# Build BERT_CRF_NER model
 
 class BERT_CRF_NER(nn.Module):
 
@@ -544,6 +554,8 @@ def evaluate(model, predict_dataloader, batch_size, epoch_th, dataset_name):
 global_step_th = int(len(train_examples) / batch_size / gradient_accumulation_steps * start_epoch)
 
 warmup_proportion = 0.1
+
+# Training Model and evaluation
 
 for epoch in range(start_epoch, total_train_epochs):
     tr_loss = 0
