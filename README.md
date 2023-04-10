@@ -29,6 +29,7 @@ This study proposes a novel BERT-based model for the fine-tune task of token cla
 │   ├── stopWord_test.txt
 │   └── stopwords.txt
 ├── train.py
+├── cloab_bert_crf.ipynb
 └── website
     ├── README.md
     ├── app.py
@@ -83,13 +84,31 @@ Last Query: Thu Mar 30 11:38:17 2023
 >> Please check the file hash is correct.<br>
 >> MD5 (ner_bert_crf_checkpoint.pt) = 4faa7b6cd4a44cd8ac829611c0920b08
 
-1. predict one sentence
+6. predict one sentence
    
     ```
     python3 predict.py -I "INPUT SENTENCE"
     # or
     python3 preict.py --input "INPUT SENTENCE"
     ```
+
+## Colab Ver.
+
+Now, You can run the colab_bert_crf.ipynb directly.
+
+```
+git clone https://github.com/stwater20/ner_bert_crf_open_version.git
+```
+
+Then, upload all file to Google Drive.
+
+In colab, link your drive space.
+
+Last Run the code!
+
+> Recommend you use GPT to run the code.
+
+![colab](images/colab.jpg)
 
 ## Datasets
 
