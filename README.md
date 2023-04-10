@@ -109,7 +109,7 @@ git clone https://github.com/stwater20/ner_bert_crf_open_version.git
 
 > Recommend you use GPU to run the code.
 
-![colab](images/colab.jpg)
+  ![colab](images/colab.jpg)
 
 ## Datasets
 
