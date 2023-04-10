@@ -96,17 +96,18 @@ Last Query: Thu Mar 30 11:38:17 2023
 
 Now, You can run the colab_bert_crf.ipynb directly.
 
+
 ```
 git clone https://github.com/stwater20/ner_bert_crf_open_version.git
 ```
 
-Then, upload all file to Google Drive.
+1. Then, upload all file to Google Drive.
 
-In colab, link your drive space.
+2. In colab, link your drive space.
 
-Last Run the code!
+3. Last running the code!
 
-> Recommend you use GPT to run the code.
+> Recommend you use GPU to run the code.
 
 ![colab](images/colab.jpg)
 
