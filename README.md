@@ -45,13 +45,14 @@ Below is the structure of the folders and files used in the project:
 
 As of Thu Mar 30, 2023, the following are required:
 
-Operating System: Ubuntu 20.04
+### Operating System
+* Ubuntu 20.04
 ### GPU
-NVIDIA RTX A5000
-NVIDIA-SMI: 515.86.01
-Driver Version: 515.86.01
-CUDA Version: 11.7
-Python: 3.8
+* NVIDIA RTX A5000
+* NVIDIA-SMI: 515.86.01
+* Driver Version: 515.86.01
+* CUDA Version: 11.7
+* Python: 3.8
   
 
 ## How to use
