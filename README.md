@@ -2,6 +2,13 @@
 
 This study introduces a unique model based on BERT, specially designed for the token classification task. It can extract specific threat-related information known as "named entities" from information security threats, with an impressive accuracy rate of over 90%. When compared to the popular GPT 3.5 in real-life situations, our model demonstrates superior performance.
 
+The research paper is the result of the Taiwan National Institution of Cyber Security (Author: Sheng-Shan Chen, Ren-Hung Hwang, Chin-Yu Sun, Ying-Dar Lin, Tun-Wen Pai*), which has been accepted at Globecom 2023. So the program will be open source on GitHub.
+
+During the period, it was assisted by CK and then used in 「A Structured Threat Information Expression-Based Knowledge Graph Construction for Cyber Threat Intelligence Analysts」, which is called 「CTI-KG」.
+
+The code of the CTI-KG is at [https://35.236.171.35/shengshan/cti-stix-kg](https://35.236.171.35/shengshan/cti-stix-kg).
+
+
 ## Model Structure 
 
 Below is the structure of the folders and files used in the project:
