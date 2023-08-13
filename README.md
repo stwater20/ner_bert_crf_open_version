@@ -174,3 +174,10 @@ To gauge the model's real-world usability, we created a website for live compari
 ![evalutation](images/ppt/messageImage_1680154162767_new.jpg)
 
 
+## Citaztion
+If you find this code helpful or use it in your research, please consider citing our work. Here's the citation information for our accepted paper:
+
+```
+Sheng-Shan Chen, Ren-Hung Hwang, Chin-Yu Sun, Ying-Dar Lin, and Tun-Wen Pai, "Enhancing Cyber Threat Intelligence with Named Entity Recognition using BERT-CRF," In Proceedings of IEEE Global Communication Conference, Kuala Lunpur, Malaysia, December 2023.
+```
+
